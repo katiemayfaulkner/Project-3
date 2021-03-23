@@ -1,1 +1,11 @@
-/index2.html
+node_modules
+temporary.html
+gulpfile.js
+my-project/package-lock.json
+.gitignore
+.vscode/settings.json
+.gitignore
+my-project/package.json
+.gitignore
+package-lock.json
+assets/css/styles.css.map
