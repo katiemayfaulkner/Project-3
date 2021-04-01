@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <div class="loader"></div>
+
     <header class="main-header">
         <img class="logo" src="assets/img/ohmyfood.png" alt="">
     </header>
@@ -25,7 +27,9 @@
         </div>
         <h1>Book the menu you like</h1>
         <p>Discover the top-of-the-art restaurants we picked for you</p>
-        <button>Explore our restaurants</button>
+        <a href="#Explore-our-restaurants" href="">
+            <button>Explore our restaurants</button>
+        </a>
     </section>
 
     <section class="steps"> 
@@ -54,9 +58,14 @@
     </section>
 
     <section class="restaurants">
+        <a id="Explore-our-restaurants">
         <h2 class="header">Restaurants</h2>
+        </a>
         <figure class="item">
-            <a href="TheFullPalette.html">
+            <a href="restaurant.html">
+                <div class="new">
+                    <span> New </span >
+                </div>
                 <img src="assets/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                 <div class="content">
                     <article class="text">
@@ -64,11 +73,15 @@
                         <p>New York</p>
                     </article>
                     <i class="icon far fa-heart"></i>
+                    <i class="icon-fill fas fa-heart"></i>
                 </div>
             </a>
         </figure>
         <figure class="item">
-            <a href="TheEnchantedPlate.html">
+            <a href="">
+                <div class="new">
+                    <span> New </span>
+                </div>
                 <img src="assets/img/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                 <div class="content">
                     <article class="text">
@@ -76,11 +89,12 @@
                         <p>New York</p>
                     </article>
                     <i class="icon far fa-heart"></i>
+                    <i class="icon-fill fas fa-heart"></i>
                 </div>
             </a>
         </figure>
         <figure class="item">
-            <a href="Bastille.html">
+            <a href="">
                 <img src="assets/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
                 <div class="content">
                     <article class="text">
@@ -88,11 +102,12 @@
                         <p>New York</p>
                     </article>
                     <i class="icon far fa-heart"></i>
+                    <i class="icon-fill fas fa-heart"></i>
                 </div>
             </a>
         </figure>
         <figure class="item">
-            <a href="LeGourmand.html">
+            <a href="">
                 <img src="assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
                 <div class="content">
                     <article class="text">
@@ -100,24 +115,25 @@
                         <p>New York</p>
                     </article>
                     <i class="icon far fa-heart"></i>
+                    <i class="icon-fill fas fa-heart"></i>
                 </div>
             </a>
         </figure>
     </section>
     
     <footer class="footer">
-        <h2 class="header"> ohmyfood </h2>
-        <nav class="item">
-            <div class="content">
-                <i class="icon fas fa-utensils"></i>
-                <a href="">Suggest a restaurant</a>
-            </div>
-            <div class="content">
-                <i class="icon fas fa-hands-helping"></i>
-                <a href="">Become a partner</a>
-            </div>
+        <h2> ohmyfood </h2>
+        <nav >
+            <a href="">
+                <i class="fas fa-utensils"></i>
+                Suggest a restaurant
+            </a>
+            <a href="">
+                <i class="fas fa-hands-helping"></i>
+                Become a partner
+            </a>
             <a href="">Legal</a>
-            <a href="">Contact</a>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
         </nav>
     </footer>
     <script src="assets/js/main.js"></script>
