@@ -31,7 +31,9 @@
 
   .content {
     position: relative;
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
 
     span {
       position: absolute;
@@ -109,6 +111,7 @@
 .intro {
   background-color: #f6f6f6;
   text-align: center;
+  padding-bottom: 55px;
 
   .location {
     width: 100%;
@@ -130,18 +133,22 @@
     padding: 15px;
     font-weight: lighter;
     font-size: 17px;
+    margin-bottom: 20px;
   }
 
-  button {
+  .button {
+    display: block;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 14px 20px;
     border-radius: 24px;
-    margin: 15px 0px 45px 0px;
     color: white;
     background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-size: 17px;
-    cursor: pointer;
+    text-decoration: none;
     transition: 300ms ease-in-out;
 
     &:hover {
@@ -272,13 +279,13 @@
       .icon {
         position: absolute;
         font-size: 25px;
-        left: 85%;
+        right: 20px;
         line-height: 50px;
       }
       .icon-fill {
         position: absolute;
         font-size: 25px;
-        left: 85%;
+        right: 20px;
         line-height: 50px;
         color: transparent;
         transform: scale(0.4);
@@ -288,7 +295,7 @@
           transform: scale(0.85);
           background: -webkit-linear-gradient(#eb83dd, #9326e1);
           background-clip: border-box;
-          background-clip: text;
+          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       }
@@ -354,8 +361,7 @@
   background-color: #f6f6f6;
   width: 100%;
   border-radius: 30px 30px 0 0;
-  padding-bottom: 30px;
-
+  padding-bottom: 40px;
 
   .menu-header {
     display: inline-flex;
@@ -364,35 +370,39 @@
     width: 100%;
     justify-content: space-between;
     box-sizing: border-box;
+    position: relative;
 
     .title {
       font-size: 27px;
       font-family: "shrikhand";
+      margin-right: 20px;
     }
 
-    .icon {
-      margin-left: 290px;
+    .icon { 
+      margin-right: 20px;
       font-size: 25px;
-      position: absolute;
+      position: relative;
       cursor: pointer;
-    }
-    .icon-fill {
+
+       .icon-fill {
       position: absolute;
-      margin-left: 290px;
       font-size: 25px;
       color: transparent;
       transform: scale(0.4);
       transition: transform 400ms;
       cursor: pointer;
+      right: 0px;
 
       &:hover {
         transform: scale(0.85);
         background: -webkit-linear-gradient(#eb83dd, #9326e1);
         background-clip: border-box;
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
+    }
+   
   }
 
   .item {
@@ -488,10 +498,6 @@
           transform: rotate(360deg);
         }
       }
-      
-      &:active{
-        color: #fc8fed;
-      }
     }
 
     :nth-child(3) {
@@ -518,26 +524,30 @@
     @keyframes fadeIn {
       0% {
         opacity: 0;
-        scale: 0.8;
+        transform: scale(0.8);
       }
       85% {
-        scale: 1.01;
+        transform: scale(1.01);
       }
       100% {
         opacity: 1;
-        scale: 1;
+        transform: scale(1);
       }
     }
   }
 
-  button {
-    display: block;
+  .checkout-btn {
+    display: none;
+    min-width: 200px;
+    position: sticky;
+    bottom: 2%;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
     padding: 14px 20px;
     border-radius: 24px;
-
     color: white;
     background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
     border: none;
@@ -551,8 +561,19 @@
       transform: scale(1.06);
     }
 
-    &:active  {
-      background-image: linear-gradient(to bottom right, #99e2d0, #adffe9);
+    &.active {
+      display: block;
+    }
+    &:focus {
+      animation: button forwards;
+    }
+    @keyframes button {
+      0% {
+        background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
+      }
+      100% {
+        background-image: linear-gradient(to bottom right, #88f3d8, #00ae82);
+      }
     }
   }
 }
@@ -696,5 +717,12 @@
       margin: 1%;
       width: calc(94% / 3);
     }
+  }
+
+  /* MENU PAGES */
+  /* Menu */
+  .menu {
+    padding: 0 30px 40px 30px;
+    box-sizing: border-box;
   }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Small devices (phones, 600px and down) */
 * {
   padding: 0;
@@ -47,7 +46,9 @@
 
 .loader .content {
   position: relative;
-  margin-left: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
 }
 
 .loader .content span {
@@ -169,6 +170,7 @@
 .intro {
   background-color: #f6f6f6;
   text-align: center;
+  padding-bottom: 55px;
 }
 
 .intro .location {
@@ -192,12 +194,16 @@
   padding: 15px;
   font-weight: lighter;
   font-size: 17px;
+  margin-bottom: 20px;
 }
 
-.intro button {
+.intro .button {
+  display: block;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 14px 20px;
   border-radius: 24px;
-  margin: 15px 0px 45px 0px;
   color: white;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#eb83dd), to(#a73ff2));
   background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
@@ -205,12 +211,12 @@
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   font-size: 17px;
-  cursor: pointer;
+  text-decoration: none;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
-.intro button:hover {
+.intro .button:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#c67efa), to(#fc8fed));
   background-image: linear-gradient(to bottom right, #c67efa, #fc8fed);
   -webkit-transform: scale(1.06);
@@ -370,14 +376,14 @@
 .restaurants .item .content .icon {
   position: absolute;
   font-size: 25px;
-  left: 85%;
+  right: 20px;
   line-height: 50px;
 }
 
 .restaurants .item .content .icon-fill {
   position: absolute;
   font-size: 25px;
-  left: 85%;
+  right: 20px;
   line-height: 50px;
   color: transparent;
   -webkit-transform: scale(0.4);
@@ -393,7 +399,7 @@
           transform: scale(0.85);
   background: -webkit-linear-gradient(#eb83dd, #9326e1);
   background-clip: border-box;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -465,7 +471,7 @@
   background-color: #f6f6f6;
   width: 100%;
   border-radius: 30px 30px 0 0;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .menu .menu-header {
@@ -482,23 +488,24 @@
           justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .menu .menu-header .title {
   font-size: 27px;
   font-family: "shrikhand";
+  margin-right: 20px;
 }
 
 .menu .menu-header .icon {
-  margin-left: 290px;
+  margin-right: 20px;
   font-size: 25px;
-  position: absolute;
+  position: relative;
   cursor: pointer;
 }
 
-.menu .menu-header .icon-fill {
+.menu .menu-header .icon .icon-fill {
   position: absolute;
-  margin-left: 290px;
   font-size: 25px;
   color: transparent;
   -webkit-transform: scale(0.4);
@@ -508,14 +515,15 @@
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
   cursor: pointer;
+  right: 0px;
 }
 
-.menu .menu-header .icon-fill:hover {
+.menu .menu-header .icon .icon-fill:hover {
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
   background: -webkit-linear-gradient(#eb83dd, #9326e1);
   background-clip: border-box;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -650,10 +658,6 @@
           transform: rotate(360deg);
 }
 
-.menu .item .content:active {
-  color: #fc8fed;
-}
-
 .menu .item :nth-child(3) {
   opacity: 1;
   -webkit-animation: fadeIn 400ms ease-in-out;
@@ -687,33 +691,45 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
-    scale: 0.8;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   85% {
-    scale: 1.01;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
   }
   100% {
     opacity: 1;
-    scale: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    scale: 0.8;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   85% {
-    scale: 1.01;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
   }
   100% {
     opacity: 1;
-    scale: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-.menu button {
-  display: block;
+.menu .checkout-btn {
+  display: none;
+  min-width: 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 2%;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
   font-size: 15px;
@@ -731,16 +747,42 @@
   transition: 300ms ease-in-out;
 }
 
-.menu button:hover {
+.menu .checkout-btn:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#c67efa), to(#fc8fed));
   background-image: linear-gradient(to bottom right, #c67efa, #fc8fed);
   -webkit-transform: scale(1.06);
           transform: scale(1.06);
 }
 
-.menu button:active  {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#99e2d0), to(#adffe9));
-  background-image: linear-gradient(to bottom right, #99e2d0, #adffe9);
+.menu .checkout-btn.active {
+  display: block;
+}
+
+.menu .checkout-btn:focus {
+  -webkit-animation: button forwards;
+          animation: button forwards;
+}
+
+@-webkit-keyframes button {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#eb83dd), to(#a73ff2));
+    background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#88f3d8), to(#00ae82));
+    background-image: linear-gradient(to bottom right, #88f3d8, #00ae82);
+  }
+}
+
+@keyframes button {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#eb83dd), to(#a73ff2));
+    background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#88f3d8), to(#00ae82));
+    background-image: linear-gradient(to bottom right, #88f3d8, #00ae82);
+  }
 }
 
 /* Responsive (laptops, tablets, 750px and up) */
@@ -875,6 +917,13 @@
   .steps .item {
     margin: 1%;
     width: calc(94% / 3);
+  }
+  /* MENU PAGES */
+  /* Menu */
+  .menu {
+    padding: 0 30px 40px 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 /*# sourceMappingURL=styles.css.map */
