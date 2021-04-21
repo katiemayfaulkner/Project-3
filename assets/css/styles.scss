@@ -272,16 +272,19 @@
         font-size: 16px;
         line-height: 22px;
         display: inline-block;
+
         h3 {
           line-height: 28px;
         }
       }
+
       .icon {
         position: absolute;
         font-size: 25px;
         right: 20px;
         line-height: 50px;
       }
+
       .icon-fill {
         position: absolute;
         font-size: 25px;
@@ -378,31 +381,30 @@
       margin-right: 20px;
     }
 
-    .icon { 
+    .icon {
       margin-right: 20px;
       font-size: 25px;
       position: relative;
       cursor: pointer;
 
-       .icon-fill {
-      position: absolute;
-      font-size: 25px;
-      color: transparent;
-      transform: scale(0.4);
-      transition: transform 400ms;
-      cursor: pointer;
-      right: 0px;
+      .icon-fill {
+        position: absolute;
+        font-size: 25px;
+        color: transparent;
+        transform: scale(0.4);
+        transition: transform 400ms;
+        cursor: pointer;
+        right: 0px;
 
-      &:hover {
-        transform: scale(0.85);
-        background: -webkit-linear-gradient(#eb83dd, #9326e1);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        &:hover {
+          transform: scale(0.85);
+          background: -webkit-linear-gradient(#eb83dd, #9326e1);
+          background-clip: border-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
-    }
-   
   }
 
   .item {
@@ -564,9 +566,11 @@
     &.active {
       display: block;
     }
+
     &:focus {
       animation: button forwards;
     }
+
     @keyframes button {
       0% {
         background-image: linear-gradient(to bottom right, #eb83dd, #a73ff2);
