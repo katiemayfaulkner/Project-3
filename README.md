@@ -2,4 +2,4 @@
 
 In this project I faced my second coding challenge, which consisted of integrating animations into a web page.
 
-The link for the deployment is the following :
+The link for the deployment is the following : https://katiemayfaulkner.github.io/Project-3/
